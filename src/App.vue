@@ -1,28 +1,37 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <div id='slogan' class='text-center'>
+      <h1>NameGator</h1>
+      <br/>
+      <h2 class='text-secondary'>Gerador de Nomes utilizando Vue.js, GraphQl e NodeJs</h2>
+    </div>
+    <div class='main'>
+      <DomainList />
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+  import 'bootstrap/dist/css/bootstrap.css';
+  import 'font-awesome/css/font-awesome.css';
+  import DomainList from './components/DomainList';
 
-export default {
-  name: 'app',
-  components: {
-    HelloWorld
-  }
-}
+  export default {
+    name: 'app',
+    components: {
+      DomainList
+    }
+  };
+
 </script>
-
+  
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  #slogan {
+    margin: 30px 0;
+  }
+
+  #main {
+    background-color: #f1f1f1;
+    padding: 30px;
+  }
 </style>
